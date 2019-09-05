@@ -1,6 +1,8 @@
 import React, { Component } from 'react';
-import '../Partials/App.scss';
 import axios from 'axios';
+import '../Partials/App.scss';
+import Form from './Form';
+import Recipes from './Recipes';
 
 
 const apiKey = '6fd58c2421e8e2469be5ea3e8d4c9e6d';
@@ -18,7 +20,7 @@ class App extends Component {
 
   getRecipes = e => {
     e.preventDefault();
-
+    console.log("submitted");
     const recipeName = e.target.elements.recipeName.value;
 
     axios({
@@ -32,7 +34,7 @@ class App extends Component {
       }
     })
       .then(res => {
-        // console.log(res.data.recipes);
+        console.log(res.data.recipes);
         this.setState({
           recipes: res.data.recipes,
           isLoading: false,
@@ -44,7 +46,17 @@ class App extends Component {
     return (
       <div className="App">
         <header className="headerContainer">
-          <h1>Hello There!</h1>
+          <h1>Recipe App! 🍽</h1>
+          <Form getRecipes={(e) => this.getRecipes(e)} />
+          {
+            this.state.recipes.map((recipe, index) => {
+              return (
+                <div key={index}>
+                  <Recipes myRecipe={recipe} />
+                </div>
+              )
+            })
+          }
         </header>
       </div>
     );
