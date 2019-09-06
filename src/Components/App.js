@@ -35,8 +35,10 @@ class App extends Component {
     })
       .then(res => {
         console.log(res.data.recipes);
+        const threeRecipes = res.data.recipes.slice(0, 3);
+        // console.log(threeRecipes);
         this.setState({
-          recipes: res.data.recipes,
+          recipes: threeRecipes,
           isLoading: false,
         })
       }).catch(err => (err))
@@ -46,17 +48,9 @@ class App extends Component {
     return (
       <div className="App">
         <header className="headerContainer">
-          <h1>Recipe App! 🍽</h1>
+          <h1 className="headerTitle">Recipe App! 🍽</h1>
           <Form getRecipes={(e) => this.getRecipes(e)} />
-          {
-            this.state.recipes.map((recipe, index) => {
-              return (
-                <div key={index}>
-                  <Recipes myRecipe={recipe} />
-                </div>
-              )
-            })
-          }
+          <Recipes myRecipe={this.state.recipes} />
         </header>
       </div>
     );
