@@ -2,11 +2,39 @@
   text-align: center;
 }
 
+.overlay {
+  width: 1080px;
+  background-color: rgba(0, 0, 0, 0.3);  
+  height: 100vh;
+  display: flex;
+  flex-direction:  column;
+  justify-content: center;
+  align-items: center;
+}
+
+.headerContainer {
+  background-image: url('../images/brooke-lark-jUPOXXRNdcA-unsplash.jpg');
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  height: 100vh;
+  display: flex;
+  flex-direction:  column;
+  justify-content: center;
+  align-items: center;
+}
+
 .headerTitle {
-  font-size: 30px;
-  color: purple;
+  font-size: 3rem;
+  color: #fff;
   margin: 0;
   padding: 5% 0;
+}
+
+.typeIngredients {
+  font-size: 1.5rem;
+  color: #fff;
+  padding-bottom: 5%;
 }
 
 form {
@@ -42,10 +70,26 @@ form {
   transition: all 0.3s;
 }
 
-// h4 {
-//   margin-bottom: 40px;
-// }
-
 input[type="text"] { 
   outline: none;
 }
+
+//MODAL STYLES
+
+  .Modal {
+    position: absolute;
+    top: 40px;
+    left: 40px;
+    right: 40px;
+    bottom: 40px;
+    background-color: papayawhip;
+  }
+
+  .Overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rebeccapurple;
+  }

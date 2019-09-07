@@ -1,3 +1,8 @@
+html {
+  font-size: 125%;
+  overflow-x: hidden;
+}
+
 body {
   background: #F0F8FF;
   font-family: sans-serif;
@@ -10,14 +15,14 @@ body {
     max-width: 1680px;
     width: 90%;
     margin: 0 auto;
-    border: 2px solid coral;
+    // border: 2px solid coral;
 }
 
 .innerWrapper {
     max-width: 1080px;
     width: 100%;
     margin: 0 auto;
-    border: 2px solid coral;
+    // border: 2px solid coral;
 }
 
 img {
@@ -28,7 +33,7 @@ img {
 }
 
 a {
-  color: #ffffff !important;
+  color: #000;
   text-decoration: none;
 }
 
