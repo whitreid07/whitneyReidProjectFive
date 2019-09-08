@@ -7,13 +7,13 @@ const Recipes = (props) => {
     <div className="wrapper">
       <div className="innerWrapper">
         <div className="container">
-          {props.myRecipe.map(recipe => {
+          {props.myRecipes.map(recipe => {
             return (
-              <div className="recipeContainer">
+              < div tabindex="0" className="recipeContainer" >
                 <img className="recipeImage" src={recipe.image_url} alt={recipe.title} />
                 <h2 className="recipeTitle">{recipe.title}</h2>
                 <p className="recipePublisher"><span>Publisher:</span>{recipe.publisher}</p>
-                <a onChangeclassName="recipeUrl" href={recipe.source_url}>View Recipe</a>
+                <a onChange className="recipeButtons" href={recipe.source_url}>View Recipe</a>
               </div>
             )
           })}

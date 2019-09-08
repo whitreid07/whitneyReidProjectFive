@@ -1,20 +1,24 @@
 import React, { Component } from 'react';
 import axios from 'axios';
+import swal from 'sweetalert';
 import '../Partials/App.scss';
 import Form from './Form';
 import Recipes from './Recipes';
-import firebase from './firebase';
-import fakeList from './fakeList';
 
-const apiKey = '30c105daaed4f60bf6a575ed72e9bb81';
+// import firebase from './firebase';
+// import fakeList from './fakeList';
+
+const apiKey = '6195a5a12e7b522530e58fe9806fc4a3';
 const apiUrl = 'https://www.food2fork.com/api/search';
+// const apiGet = "https://www.food2fork.com/api/get/rId";
 
 class App extends Component {
   constructor() {
     super();
     this.state = {
       recipes: [],
-      userInput: '',
+      rId: [],
+      hasRecipes: true,
       isLoading: true,
     }
   }
@@ -23,6 +27,7 @@ class App extends Component {
     e.preventDefault();
     console.log("submitted");
     const recipeName = e.target.elements.recipeName.value;
+    // const rId = e.target.elements.recipeName.value;
 
     axios({
       method: 'GET',
@@ -37,9 +42,9 @@ class App extends Component {
       .then(res => {
         console.log("testing", res.data.recipes);
         const threeRecipes = res.data.recipes.slice(0, 3);
-        // console.log(threeRecipes);
         this.setState({
           recipes: threeRecipes,
+          hasRecipes: false,
           isLoading: false,
         })
       }).catch(err => (err))
@@ -70,16 +75,16 @@ class App extends Component {
   //   });
   // }
 
-  removeBook = (bookId) => {
-    const dbRef = firebase.database().ref();
-    dbRef.child(bookId).remove();
-  }
+  // removeBook = (bookId) => {
+  //   const dbRef = firebase.database().ref();
+  //   dbRef.child(bookId).remove();
+  // }
 
-  handleChange = (e) => {
-    this.setState({
-      userInput: e.target.value,
-    });
-  };
+  // handleChange = (e) => {
+  //   this.setState({
+  //     userInput: e.target.value,
+  //   });
+  // };
 
 
   render() {
@@ -88,13 +93,19 @@ class App extends Component {
         <header className="headerContainer">
           <div className="overlay">
             <div className="headerContents">
-              <h1 className="headerTitle">What's Cooking Tonight? 🍽</h1>
-              <p className="typeIngredients">Type in an ingredient to get a recipe!</p>
+              <h1 className="headerTitle">what's cooking tonight? 🍽</h1>
+              <p className="typeWord">Type in a word to get a recipe!</p>
+
               <Form getRecipes={(e) => this.getRecipes(e)} />
+
+              <Recipes myRecipes={this.state.recipes} />
+
             </div>
           </div>
-          <Recipes myRecipe={this.state.recipes} />
         </header>
+        <footer className="recipeFooter">
+          <p className="footerCopy"> Created by Whitney Reid &copy; 2019</p>
+        </footer>
       </div>
     );
   }

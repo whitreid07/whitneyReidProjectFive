@@ -12,16 +12,23 @@
   align-items: center;
 }
 
+.headerContents {
+    position: absolute;
+    border: 2px solid green;
+    justify-content: center;
+  }
+
 .headerContainer {
   background-image: url('../images/brooke-lark-jUPOXXRNdcA-unsplash.jpg');
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
-  height: 100vh;
+  // height: 100vh;
   display: flex;
   flex-direction:  column;
   justify-content: center;
   align-items: center;
+  margin: 0 auto;
 }
 
 .headerTitle {
@@ -29,16 +36,18 @@
   color: #fff;
   margin: 0;
   padding: 5% 0;
+  text-transform: capitalize;
 }
 
-.typeIngredients {
-  font-size: 1.5rem;
+.typeWord {
+  font-size: 1.8rem;
   color: #fff;
   padding-bottom: 5%;
+  font-weight: 900;
 }
 
-form {
-  padding-bottom: 10%;
+.formContainer {
+  padding-bottom: 5%;
 }
 
 .formInput {
@@ -47,20 +56,22 @@ form {
   border-bottom: solid 1px #FF7F50;
   margin-right: 10px;
   letter-spacing: 1.5px;
-  padding: 5px;
+  padding: 1%;
   font-size: 15px;
+  width: 35%;
+  // justify-content: center;
 }
 
 .formButton {
   border: solid 2px #FF7F50;
   background: #FF7F50;
   color:#fff;
-  padding: 5px 015px;
+  padding: 1%;
   margin: 0 5px;
   border-radius: 1px;
   font-size: 15px;
   text-transform: uppercase;
-  font-weight: 500;
+  font-weight: 700;
   margin-left: 15px;
 }
 
@@ -76,20 +87,20 @@ input[type="text"] {
 
 //MODAL STYLES
 
-  .Modal {
-    position: absolute;
-    top: 40px;
-    left: 40px;
-    right: 40px;
-    bottom: 40px;
-    background-color: papayawhip;
-  }
+  // .Modal {
+  //   position: absolute;
+  //   top: 40px;
+  //   left: 40px;
+  //   right: 40px;
+  //   bottom: 40px;
+  //   background-color: papayawhip;
+  // }
 
-  .Overlay {
-    position: fixed;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    background-color: rebeccapurple;
-  }
+  // .Overlay {
+  //   position: fixed;
+  //   top: 0;
+  //   left: 0;
+  //   right: 0;
+  //   bottom: 0;
+  //   background-color: rebeccapurple;
+  // }
