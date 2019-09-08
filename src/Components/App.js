@@ -1,26 +1,27 @@
 import React, { Component } from 'react';
 import axios from 'axios';
-import swal from 'sweetalert';
+// import swal from 'sweetalert';
 import '../Partials/App.scss';
 import Form from './Form';
 import Recipes from './Recipes';
+import GetIngreidents from './GetIngridents';
 
-// import firebase from './firebase';
-// import fakeList from './fakeList';
-
-const apiKey = '6195a5a12e7b522530e58fe9806fc4a3';
+const apiKey = '6fd58c2421e8e2469be5ea3e8d4c9e6d';
 const apiUrl = 'https://www.food2fork.com/api/search';
-// const apiGet = "https://www.food2fork.com/api/get/rId";
 
 class App extends Component {
   constructor() {
     super();
     this.state = {
       recipes: [],
-      rId: [],
+      currentIngridents: [],
       hasRecipes: true,
       isLoading: true,
     }
+  }
+
+  setCurrentIngredients = (ingredients) => {
+    this.setState({ currentIngridents: ingredients })
   }
 
   getRecipes = e => {
@@ -42,6 +43,7 @@ class App extends Component {
       .then(res => {
         console.log("testing", res.data.recipes);
         const threeRecipes = res.data.recipes.slice(0, 3);
+        console.log(threeRecipes);
         this.setState({
           recipes: threeRecipes,
           hasRecipes: false,
@@ -49,6 +51,11 @@ class App extends Component {
         })
       }).catch(err => (err))
   }
+
+  // async componentDidMount() {
+  //   const response = await axios.get(`https://www.food2fork.com/api/get?key=${apiKey}&rId=47746`);
+  //   console.log(response);
+  // }
 
   // componentDidMount() {
   //   const dbRef = firebase.database().ref();
@@ -98,11 +105,13 @@ class App extends Component {
 
               <Form getRecipes={(e) => this.getRecipes(e)} />
 
-              <Recipes myRecipes={this.state.recipes} />
+              <Recipes myRecipes={this.state.recipes} setCurrentIngredients={this.setCurrentIngredients} />
 
+              <GetIngreidents ingredients={this.state.currentIngridents} />
             </div>
           </div>
         </header>
+        <button className="backTop">Back to top</button>
         <footer className="recipeFooter">
           <p className="footerCopy"> Created by Whitney Reid &copy; 2019</p>
         </footer>
