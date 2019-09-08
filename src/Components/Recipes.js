@@ -5,7 +5,7 @@ import axios from 'axios'
 // import Modal from './Modal';
 
 
-const apiKey = '6fd58c2421e8e2469be5ea3e8d4c9e6d';
+const apiKey = '30c105daaed4f60bf6a575ed72e9bb81';
 
 
 const Recipes = (props) => {
@@ -14,7 +14,7 @@ const Recipes = (props) => {
   const onRecipeClick = async (rId) => {
     const response = await axios.get(`https://www.food2fork.com/api/get?key=${apiKey}&rId=${rId}`);
     console.log("on recipe click", response.data);
-    props.setCurrentIngredients(response.data.recipe.ingredients)
+    props.setCurrentIngredients(response.data.recipe)
     // Make an API call to the recipe ingredient END point. USING the recipe_id to fetch
     //ingredients.
 

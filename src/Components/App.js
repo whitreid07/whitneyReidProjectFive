@@ -6,7 +6,7 @@ import Form from './Form';
 import Recipes from './Recipes';
 import GetIngreidents from './GetIngridents';
 
-const apiKey = '6fd58c2421e8e2469be5ea3e8d4c9e6d';
+const apiKey = '30c105daaed4f60bf6a575ed72e9bb81';
 const apiUrl = 'https://www.food2fork.com/api/search';
 
 class App extends Component {
@@ -107,7 +107,7 @@ class App extends Component {
 
               <Recipes myRecipes={this.state.recipes} setCurrentIngredients={this.setCurrentIngredients} />
 
-              <GetIngreidents ingredients={this.state.currentIngridents} />
+              <GetIngreidents ingredientsObject={this.state.currentIngridents} />
             </div>
           </div>
         </header>
