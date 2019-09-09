@@ -4,9 +4,10 @@ import swal from 'sweetalert';
 import '../Partials/App.scss';
 import Form from './Form';
 import Recipes from './Recipes';
-import GetIngreidents from './GetIngridents';
+import GetIngredients from './GetIngredients';
 
-const apiKey = '30c105daaed4f60bf6a575ed72e9bb81';
+
+const apiKey = 'dd6f40c400d16e55e0e14c0c14f5a777';
 const apiUrl = 'https://www.food2fork.com/api/search';
 
 class App extends Component {
@@ -14,7 +15,7 @@ class App extends Component {
     super();
     this.state = {
       recipes: [],
-      currentIngridents: [],
+      currentIngredients: [],
       hasRecipes: true,
       isModalShown: false,
       isLoading: true,
@@ -22,14 +23,13 @@ class App extends Component {
   }
 
   setCurrentIngredients = (ingredients) => {
-    this.setState({ currentIngridents: ingredients })
+    this.setState({ currentIngredients: ingredients })
   }
 
   getRecipes = e => {
     e.preventDefault();
     console.log("submitted");
     const recipeName = e.target.elements.recipeName.value;
-    // const rId = e.target.elements.recipeName.value;
 
     axios({
       method: 'GET',
@@ -45,13 +45,13 @@ class App extends Component {
 
         if (res.data.recipes.length === 0) {
           swal({
-            title: `Sorry...", "That word is cannot be found, please find another!`,
-            icon: "warning"
+            title: `Sorry..., That word cannot be found, please try another!`,
+            icon: "error"
           })
         }
         else {
           console.log("testing", res.data.recipes);
-          const threeRecipes = res.data.recipes.slice(0, 3);
+          const threeRecipes = res.data.recipes.slice(0, 6);
           console.log(threeRecipes);
           this.setState({
             recipes: threeRecipes,
@@ -78,19 +78,17 @@ class App extends Component {
         <header className="headerContainer">
           <div className="overlay">
             <div className="headerContents">
-              <h1 className="headerTitle">what's cooking tonight? 🍽</h1>
+              <h1 className="headerTitle">what's cooking tonight? <span role="img" aria-label="folk, plate and knife">🍽</span></h1>
               <p className="typeWord">Type in a word to get a recipe!</p>
 
               <Form getRecipes={(e) => this.getRecipes(e)} />
 
-              <Recipes myRecipes={this.state.recipes} setCurrentIngredients={this.setCurrentIngredients} getModal={this.getModal} />
-
-              {this.state.isModalShown ? <GetIngreidents ingredientsObject={this.state.currentIngridents} closeModal={this.closeModal} /> : null}
-
             </div>
           </div>
         </header>
-        <button className="backTop">Back to top</button>
+        <Recipes id="recipe" myRecipes={this.state.recipes} setCurrentIngredients={this.setCurrentIngredients} getModal={this.getModal} />
+
+        {this.state.isModalShown ? <GetIngredients ingredientsObject={this.state.currentIngredients} closeModal={this.closeModal} /> : null}
         <footer className="recipeFooter">
           <p className="footerCopy"> Created by Whitney Reid &copy; 2019</p>
         </footer>

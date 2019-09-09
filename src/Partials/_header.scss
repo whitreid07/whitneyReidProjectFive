@@ -13,17 +13,17 @@
 }
 
 .headerContents {
-    position: absolute;
-    border: 2px solid green;
-    justify-content: center;
-  }
+  position: absolute;
+  // border: 2px solid green;
+  justify-content: center;
+}
 
 .headerContainer {
   background-image: url('../images/brooke-lark-jUPOXXRNdcA-unsplash.jpg');
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
-  // height: 100vh;
+  height: 100vh;
   display: flex;
   flex-direction:  column;
   justify-content: center;
@@ -59,8 +59,8 @@
   padding: 1%;
   font-size: 15px;
   width: 35%;
-  // justify-content: center;
 }
+
 
 .formButton {
   border: solid 2px #FF7F50;

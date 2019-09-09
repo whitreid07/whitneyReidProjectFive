@@ -8,7 +8,9 @@ body {
   font-family: sans-serif;
   height: 100vh;
   margin: 0;
-  position: relative;
+  // background-image: url('../images/brooke-lark-jUPOXXRNdcA-unsplash.jpg');
+  // background-position: 50% 50%;
+  // background-repeat: no-repeat;
 }
 
 .wrapper {
@@ -19,10 +21,11 @@ body {
 }
 
 .innerWrapper {
-    max-width: 1080px;
-    width: 90%;
-    margin: 0 auto;
-    border: 2px solid coral;
+  max-width: 1080px;
+  width: 90%;
+  margin: 0 auto;
+  // border: 2px solid coral;
+  position: relative;
 }
 
 img {
@@ -42,7 +45,7 @@ button:focus {
 }
 
 :focus {
-  box-shadow: 0 0 0 0.5px #ffffff, 0 0 3px 5px #3a97f9;
+  box-shadow: 0 0 0 0.5px #ffffff, 0 0 3px 3px #3a97f9;
 }     
 
 /* FOOTER SECTION */
@@ -52,13 +55,14 @@ button:focus {
    bottom:0;
    width:100%;
    height: 40px;  
-   background:#20B2AAcf;
-  //  margin-top: 100px;
+   background: #000;
+   margin-top: -2%;
+   z-index: 100;
 }
 
 .footerCopy {
   color: #ffffff;
   padding: 0.5% 0;
-  font-size: 0.9rem;
+  font-size: 0.8rem;
   font-weight: 700;
 }

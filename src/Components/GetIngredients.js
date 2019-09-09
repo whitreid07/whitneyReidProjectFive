@@ -1,6 +1,6 @@
 import React from 'react';
 
-const GetIngridents = (props) => {
+const GetIngredients = (props) => {
   // console.log("found ingredients", props.ingredients)
   return (
     <div className="modal">
@@ -11,11 +11,11 @@ const GetIngridents = (props) => {
         )
 
       }) : null}
-      <button onClick={() => props.closeModal(false)} className="ingridentsButton">Close</button>
+      <button onClick={() => props.closeModal(false)} className="ingredientsButton">Close</button>
     </div>
   )
 
 
 };
 
-export default GetIngridents;
+export default GetIngredients;
