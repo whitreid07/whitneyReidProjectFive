@@ -1,7 +1,7 @@
 import React from 'react';
 
 const GetIngredients = (props) => {
-  // console.log("found ingredients", props.ingredients)
+  console.log("found ingredients", props.ingredients)
   return (
     <div className="modal">
       <h1>{props.ingredientsObject.title}</h1>

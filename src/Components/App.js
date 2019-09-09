@@ -7,7 +7,7 @@ import Recipes from './Recipes';
 import GetIngredients from './GetIngredients';
 
 
-const apiKey = 'dd6f40c400d16e55e0e14c0c14f5a777';
+const apiKey = '30c105daaed4f60bf6a575ed72e9bb81';
 const apiUrl = 'https://www.food2fork.com/api/search';
 
 class App extends Component {
@@ -89,6 +89,7 @@ class App extends Component {
         <Recipes id="recipe" myRecipes={this.state.recipes} setCurrentIngredients={this.setCurrentIngredients} getModal={this.getModal} />
 
         {this.state.isModalShown ? <GetIngredients ingredientsObject={this.state.currentIngredients} closeModal={this.closeModal} /> : null}
+
         <footer className="recipeFooter">
           <p className="footerCopy"> Created by Whitney Reid &copy; 2019</p>
         </footer>

@@ -1,28 +1,18 @@
 import React from 'react';
 import { Link } from 'react-scroll';
 
-const Form = (props) => {
+const Form = (props, recipe, onRecipeClick) => {
   return (
     <form onSubmit={props.getRecipes}>
       <div className="formContainer">
         <input className="formInput" type="text" name="recipeName" placeholder="enter word ie. pizza" />
-
-        <Link
-          activeClass="active"
-          to="container"
-          spy={true}
-          smooth={true}
-          offset={0}
-          duration={500}
-          className="recipeButtons"
-        >Find Recipe! </Link>
-
+        <button onClick={() => onRecipeClick(recipe.recipe_id)} className="formButton">Find Recipe!
+        </button>
       </div>
-    </form >
+    </form>
   )
 
 };
-
 
 
 
