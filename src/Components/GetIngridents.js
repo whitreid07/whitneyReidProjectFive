@@ -10,7 +10,8 @@ const GetIngridents = (props) => {
           <li key={index}>{ingredient}</li>
         )
 
-      }) : <h1>No data!</h1>}
+      }) : null}
+      <button onClick={() => props.closeModal(false)} className="ingridentsButton">Close</button>
     </div>
   )
 

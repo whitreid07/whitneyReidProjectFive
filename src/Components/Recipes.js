@@ -17,7 +17,7 @@ const Recipes = (props) => {
     props.setCurrentIngredients(response.data.recipe)
     // Make an API call to the recipe ingredient END point. USING the recipe_id to fetch
     //ingredients.
-
+    props.getModal(true)
     // Want to set those ingredients as state.
     // Create a  recipe ingredients component to render out the ingredients.
   }
