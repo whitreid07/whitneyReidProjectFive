@@ -1,7 +1,7 @@
 import React from 'react';
 import axios from 'axios'
 
-const apiKey = '30c105daaed4f60bf6a575ed72e9bb81';
+const apiKey = '452f1d12915191d1fc2777ca19f2d244';
 
 
 const Recipes = (props) => {
@@ -27,15 +27,20 @@ const Recipes = (props) => {
         <div id="formButton" className="container">
           <button className="backTop">Back to top</button>
 
-          {props.myRecipes.map((recipe) => {
+          {props.myRecipes.map((recipe, index) => {
             console.log(recipe.recipe_id)
             // You have recipe ID here.
             return (
-              < div onClick={() => onRecipeClick(recipe.recipe_id)} tabIndex="0" className="recipeContainer" >
-                <img className="recipeImage" src={recipe.image_url} alt={recipe.title} />
-                <h2 className="recipeTitle">{recipe.title}</h2>
-                <p className="recipePublisher"><span>Publisher:</span>{recipe.publisher}</p>
-                <button onClick className="recipeButtons">View Recipe</button>
+              < div id="recipeContainer" key={index} tabIndex="0" className="recipeContainer" >
+                <div className="recipeImageTitle">
+                  <img className="recipeImage" src={recipe.image_url} alt={recipe.title} />
+                  <h2 className="recipeTitle">{recipe.title}</h2>
+                </div>
+                <div className="recipeContent">
+                  <p className="recipePublisher"><span className="publisher">Publisher:</span>{recipe.publisher}</p>
+
+                  <button onClick={() => onRecipeClick(recipe.recipe_id)} className="ingredientsButton">View Ingredients</button>
+                </div>
               </div>
             )
           })}

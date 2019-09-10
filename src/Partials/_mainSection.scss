@@ -1,0 +1,80 @@
+.modalContainer {
+  position: relative;
+}
+
+.modalImageContainer,
+.modalContents {
+  display: flex;
+  flex-direction: column;
+  width: 50%;
+}
+
+.modalIngredients{
+  display: inline-flex;
+  flex-direction: column;
+  list-style: none;
+  overflow: scroll;
+  border: 2px solid #d7eef2;
+  // background: #eeeeee;
+}
+
+// .modalIngredients::-webkit-scrollbar {
+//   -webkit-appearance: none;
+//   width: 10px;
+// }
+
+.modalIngredients::-webkit-scrollbar:vertical {
+    width: 11px;
+}
+
+
+.ingredientsButton {
+  width: 50%;
+  margin: 0;
+  margin-top: 5%;
+}
+
+.ingredientsButton:hover {
+  background: #ff5e00f3;
+  border: 2px solid #ff5e00f3;
+  transition: all 0.3s;
+}
+
+.modalContainer {
+  display: flex;
+  flex-direction: column;
+}
+.modal {
+  position: absolute;
+  top: 40px;
+  left: 40px;
+  right: 40px;
+  bottom: 40px;
+  background-color: #f6f6e9;
+  display: flex;
+  padding: 10%;
+}
+.modalImageSize {
+  height: 450px;
+  object-fit: cover;
+  margin-right: 10%;
+}
+
+.modalImageSize img {
+  height:100%;
+}
+
+.modalTitle,
+.modalIngredients li {
+  padding: 2% 3%;
+  text-align: left;
+}
+.modalTitle {
+  color: #194769;
+  padding: 0;
+  padding-bottom: 2%;
+}
+
+.modalIngredients::marker {
+  font-weight: 700;
+}
