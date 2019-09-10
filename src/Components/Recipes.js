@@ -1,7 +1,7 @@
 import React from 'react';
 import axios from 'axios'
 
-const apiKey = '452f1d12915191d1fc2777ca19f2d244';
+const apiKey = '623d02466ba37f9fdb32426a6972d06f';
 
 
 const Recipes = (props) => {
@@ -25,9 +25,10 @@ const Recipes = (props) => {
     <div className="wrapper">
       <div className="innerWrapper">
         <div id="formButton" className="container">
-          <button className="backTop">Back to top</button>
+          {/*<button className="backTop">Back to top</button> */}
 
           {props.myRecipes.map((recipe, index) => {
+
             console.log(recipe.recipe_id)
             // You have recipe ID here.
             return (

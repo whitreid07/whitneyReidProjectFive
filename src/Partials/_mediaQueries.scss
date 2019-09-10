@@ -1,3 +1,34 @@
+@media only screen and (max-width: 955px){
+  .modalImageContainer, 
+  .modalContents {
+    width: 100%;
+  }
+
+  .modal {
+    display: flex;
+    padding: 10%;
+    display: flex;
+    flex-direction: column;
+  }
+
+  .modalImageSize {
+    height: 250px;
+    object-fit: cover;
+    margin-right: 10%;
+    width: 100%;
+  }
+  .modalTitle {
+    padding-top: 5%;
+  }
+
+  .modalIngredients {
+    overflow: scroll;
+     -webkit-overflow-scrolling: touch; 
+     height: 350px;
+
+}
+}
+
 @media only screen and (max-width: 933px){
   .recipeContainer {
     width: 30%;
@@ -14,7 +45,7 @@
 @media only screen and (max-width: 839px){
 
   .overlay {
-    width: 780px;
+    width: 100%;
     background-color: rgba(0, 0, 0, 0.3);
     height: 100vh;
     display: flex;
@@ -29,15 +60,26 @@
   .typeWord {
     font-size: 1.3rem;
   }
+
+  .recipeFooter {
+    margin-top: -3.9%;
+  }
 }
 
 @media only screen and (max-width: 747px){
 
+  body {
+    background-image: url('../images/brooke-lark-jUPOXXRNdcA-unsplash.jpg');
+    // height: 300vh;
+    background-position: 100% 300px;
+
+  }
+
   .headerContainer {
-    background-image: url('../images/brooke-lark-jUPOXXRNdcA-unsplash_747px.jpg');
+    background-image: url('../images/brooke-lark-jUPOXXRNdcA-unsplash.jpg');
     background-repeat: no-repeat;
-    height: 250vh;
-    // overflow: hidden;
+    background-position: 50% 0;
+    height: 100vh;
   }
 
   .overlay {
@@ -45,17 +87,7 @@
   }
 
   .formContainer {
-    // padding-bottom: 60%;
     z-index: 10;
-  }
-
-  .headerContents {
-    position: absolute;
-    padding-top: 15%;
-    top: 0;
-    
-    // padding-bottom: 11%;
-    // border: 2px solid green;
   }
 
   .headerTitle  {
@@ -83,54 +115,116 @@
    bottom: 0;
   }
 
+  .modal {
+    position: absolute;
+    top: 40px;
+    left: 40px;
+    right: 40px;
+    bottom: 0px;
+  }
+
   .backTop {
     // position: sticky;
     right: 0;
     display: block;
     margin-top: -20%;
   }
+
+  .footerCopy {
+    padding: 2% 0;
+  }
 }
 
 @media only screen and (max-width: 517px){
-  .headerContainer {
-    background-image: url('../images/brooke-lark-jUPOXXRNdcA-unsplash_517px.jpg');
-    height: 170vh;
-  }
+  
 
   .headerContents h1 {
     font-size: 2.9rem;
-    padding: 0 10%;
+    padding: 0 5%;
+    padding-top: 10%;
   }
 
   .recipeContainer {
-    width: 70%;
+    width: 100%;
+  }
+}
+@media only screen and (max-width: 475px){
+
+  .headerContents h1  {
+    font-size: 2.5rem;
+  }
+
+  .headerContents h1 {
+    padding: 0% 5%;
+    padding-top: 10%;
   }
 }
 
-@media only screen and (max-width: 458px){
-  
-  .headerContainer {
-    height: 190vh;
+@media only screen and (max-width: 417px){
+  .headerContents h1  {
+    font-size: 2.4rem;
+    padding: 0;
+    padding-top: 10%;
   }
 
-  .headerContents h1  {
-    font-size: 2.3rem;
-  }
 
   .typeWord {
     font-size: 1rem;
     padding-top: 5%;
   }
 
+  .formContainer {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    padding: 0 20%;
+  }
+  .formButton,
+  .formInput {
+    margin: 0;
+  }
+
+  .formInput {
+    display: flex;
+    width: 100%;
+    margin-bottom: 5%;
+  }
+
   .recipeContainer {
-    width: 60%;
+    width: 100%;
+  }
+
+  .recipeFooter {
+    margin-top: -4.9%;
   }
 }
 
-@media only screen and (max-width: 320px){
+@media only screen and (max-width: 368px){
 
   .headerContents h1  {
     font-size: 2rem;
   }
 
+  .formContainer {
+    padding: 0 25%;
+  }
+}
+
+@media only screen and (max-width: 320px){
+
+  .foodieLogo {
+    font-size: 1.5rem;
+  }
+
+  .headerContents h1  {
+    font-size: 1.9rem;
+  }
+
+  .formContainer {
+    padding: 0 25%;
+  }
+
+  .formInput {
+    padding: 2%;
+  }
 }

@@ -6,16 +6,17 @@ const Form = (props) => {
     <form onSubmit={props.getRecipes}>
       <div className="formContainer">
         <input className="formInput" type="text" name="recipeName" placeholder="enter word ie. pizza" />
-        <button>
-          <Link
-            activeClass="active"
-            to="recipeContainer"
-            spy={true}
-            smooth={true}
-            offset={0}
-            duration={500}
-            className="formButton"
-          >Find Recipe!</Link>
+        <Link
+          activeClass="active"
+          to="container"
+          spy={true}
+          smooth={true}
+          offset={0}
+          duration={500}
+          className="recipeButtons"
+        ></Link>
+
+        <button className="formButton">Find Recipe!
         </button>
       </div>
     </form >

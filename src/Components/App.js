@@ -7,7 +7,7 @@ import Recipes from './Recipes';
 import GetIngredients from './GetIngredients';
 
 
-const apiKey = '452f1d12915191d1fc2777ca19f2d244';
+const apiKey = '623d02466ba37f9fdb32426a6972d06f';
 const apiUrl = 'https://www.food2fork.com/api/search';
 
 class App extends Component {
@@ -78,8 +78,9 @@ class App extends Component {
         <header className="headerContainer">
           <div className="overlay">
             <div className="headerContents">
+              <div className="foodieLogo">foodie</div>
               <h1 className="headerTitle">what's cooking tonight? <span role="img" aria-label="folk, plate and knife">🍽</span></h1>
-              <p className="typeWord">Type in a word to get a recipe!</p>
+              <p className="typeWord">Type a word to get a recipe!</p>
 
               <Form getRecipes={(e) => this.getRecipes(e)} />
 
