@@ -1,7 +1,7 @@
 import React from 'react';
 
 const GetIngredients = (props, index) => {
-  console.log("found ingredients", props.ingredients)
+
   return (
     <div key={index} className="modal">
       <div className="modalImageContainer">

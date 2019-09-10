@@ -1,7 +1,7 @@
 import React from 'react';
 import axios from 'axios'
 
-const apiKey = '623d02466ba37f9fdb32426a6972d06f';
+const apiKey = '6fd58c2421e8e2469be5ea3e8d4c9e6d';
 
 
 const Recipes = (props) => {
