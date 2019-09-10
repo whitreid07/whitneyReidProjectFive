@@ -15,13 +15,8 @@
   list-style: none;
   overflow: scroll;
   border: 2px solid #d7eef2;
-  // background: #eeeeee;
 }
 
-// .modalIngredients::-webkit-scrollbar {
-//   -webkit-appearance: none;
-//   width: 10px;
-// }
 
 .modalIngredients::-webkit-scrollbar:vertical {
     width: 11px;
@@ -44,16 +39,18 @@
   display: flex;
   flex-direction: column;
 }
+
 .modal {
   position: absolute;
-  top: 40px;
-  left: 40px;
-  right: 40px;
-  bottom: 40px;
-  background-color: #f6f6e9;
+  top: 0px;
+  left: 0px;
+  right: 0px;
+  bottom: 0px;
+  background-color: $tertiaryColor;
   display: flex;
   padding: 10%;
 }
+
 .modalImageSize {
   height: 450px;
   object-fit: cover;
@@ -69,10 +66,12 @@
   padding: 2% 3%;
   text-align: left;
 }
+
 .modalTitle {
-  color: #194769;
+  color: $primaryColor;
   padding: 0;
   padding-bottom: 2%;
+  line-height: 50px;
 }
 
 .modalIngredients::marker {

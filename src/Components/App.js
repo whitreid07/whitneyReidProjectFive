@@ -6,10 +6,12 @@ import Form from './Form';
 import Recipes from './Recipes';
 import GetIngredients from './GetIngredients';
 
-
+// Declare API Key and URL
 const apiKey = '623d02466ba37f9fdb32426a6972d06f';
 const apiUrl = 'https://www.food2fork.com/api/search';
 
+//Set recipes, currentIngredients, has recipes and isModalShown data as initial state to an empty array
+//Recipe url will be the food2folk API
 class App extends Component {
   constructor() {
     super();
@@ -18,19 +20,19 @@ class App extends Component {
       currentIngredients: [],
       hasRecipes: true,
       isModalShown: false,
-      isLoading: true,
     }
   }
-
+  //Use arrow function to get ingredients parameter
   setCurrentIngredients = (ingredients) => {
     this.setState({ currentIngredients: ingredients })
   }
-
+  //Stop form from refreshing on submit
+  //Declare variable for recipeName
   getRecipes = e => {
     e.preventDefault();
-    console.log("submitted");
     const recipeName = e.target.elements.recipeName.value;
 
+    //Make ‘GET’ request using axios with the users input 
     axios({
       method: 'GET',
       url: apiUrl,
@@ -41,8 +43,9 @@ class App extends Component {
         format: 'json',
       }
     })
+      //Use .then() to get recipe results
       .then(res => {
-
+        // Error handling for when the user doesn't input a word that returns recipes
         if (res.data.recipes.length === 0) {
           swal({
             title: `Sorry..., That word cannot be found, please try another!`,
@@ -50,28 +53,24 @@ class App extends Component {
           })
         }
         else {
-          console.log("testing", res.data.recipes);
-          const threeRecipes = res.data.recipes.slice(0, 6);
-          console.log(threeRecipes);
+          //Only return six recipes out of 30 from the API call
+          const sixRecipes = res.data.recipes.slice(0, 6);
           this.setState({
-            recipes: threeRecipes,
+            recipes: sixRecipes,
             hasRecipes: false,
-            isLoading: false,
           })
         }
       }).catch(err => (err))
   }
-
+  //Function to open modal view
   getModal = (state) => {
-    // console.log("getModal", state);
     this.setState({ isModalShown: state })
   }
-
+  //Function to close modal view
   closeModal = (close) => {
-    console.log("closeModal", close);
     this.setState({ isModalShown: close })
   }
-
+  //Render foodieLogo, h1, an input field and get recipe button; once recipe is called, user has option to view recipes using modal concept
   render() {
     return (
       <div className="App">
@@ -80,7 +79,7 @@ class App extends Component {
             <div className="headerContents">
               <div className="foodieLogo">foodie</div>
               <h1 className="headerTitle">what's cooking tonight? <span role="img" aria-label="folk, plate and knife">🍽</span></h1>
-              <p className="typeWord">Type a word to get a recipe!</p>
+              <p className="typeWord">Type a word to get a recipe below!</p>
 
               <Form getRecipes={(e) => this.getRecipes(e)} />
 

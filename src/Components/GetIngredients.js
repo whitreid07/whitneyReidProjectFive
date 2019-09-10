@@ -23,10 +23,10 @@ const GetIngredients = (props, index) => {
           }) : null}
         </div>
         <button className="recipeButton">
-          <a target="_blank" href={props.ingredientsObject.source_url}><i class="fas fa-external-link-alt"></i>  Get Recipe! </a>
+          <a target="_blank" rel="noopener noreferrer" href={props.ingredientsObject.source_url}><i aria-hidden="true" title="External link icon let's user know external link will exit app" className="fas fa-external-link-alt"></i>  Get Recipe! </a>
         </button>
 
-        <button onClick={() => props.closeModal(false)} className="closeButton"><i class="fas fa-window-close"></i>  Close </button>
+        <button onClick={() => props.closeModal(false)} className="closeButton"><i aria-hidden="true" title="Close icon let's user know to close button" className="fas fa-window-close"></i>  Close </button>
       </div>
     </div>
   )

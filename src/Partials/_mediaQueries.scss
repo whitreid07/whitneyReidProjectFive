@@ -70,7 +70,6 @@
 
   body {
     background-image: url('../images/brooke-lark-jUPOXXRNdcA-unsplash.jpg');
-    // height: 300vh;
     background-position: 100% 300px;
 
   }
@@ -124,7 +123,6 @@
   }
 
   .backTop {
-    // position: sticky;
     right: 0;
     display: block;
     margin-top: -20%;
@@ -140,14 +138,41 @@
 
   .headerContents h1 {
     font-size: 2.9rem;
-    padding: 0 5%;
     padding-top: 10%;
   }
 
   .recipeContainer {
     width: 100%;
   }
+
+  .typeWord {
+    font-size: 1rem;
+    padding-top: 5%;
+  }
 }
+
+@media only screen and (max-width: 489px){
+
+  .formContainer {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    padding: 0 20%;
+  }
+
+  .formButton,
+  .formInput {
+    margin: 0;
+  }
+
+  .formInput {
+    display: flex;
+    width: 100%;
+    margin-bottom: 5%;
+  }
+
+}
+
 @media only screen and (max-width: 475px){
 
   .headerContents h1  {
@@ -179,6 +204,7 @@
     flex-direction: column;
     padding: 0 20%;
   }
+
   .formButton,
   .formInput {
     margin: 0;
@@ -207,6 +233,28 @@
 
   .formContainer {
     padding: 0 25%;
+  }
+
+  .formContainer {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    padding: 0 10%;
+  }
+}
+
+@media only screen and (max-width: 355px){
+   .headerContents h1  {
+    font-size: 2rem;
+  }
+
+  .typeWord {
+    font-size: 1rem;
+    padding: 5% 10%;
+  }
+
+  .formContainer {
+    padding: 0 10%;
   }
 }
 

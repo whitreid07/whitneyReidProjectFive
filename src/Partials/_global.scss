@@ -15,16 +15,12 @@ body {
 
 .wrapper {
     max-width: 1680px;
-    width: 100%;
     margin: 0 auto;
-    // border: 2px solid purple;
 }
 
 .innerWrapper {
   max-width: 1080px;
-  width: 90%;
   margin: 0 auto;
-  // border: 2px solid coral;
   position: relative;
 }
 
@@ -42,8 +38,6 @@ a {
 
 button {
   color:#fff;
-  // padding: 5px 10px;
-  // margin: 0 5px;
   border-radius: 1px;
   font-size: 15px;
   text-transform: uppercase;
