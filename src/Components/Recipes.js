@@ -1,7 +1,7 @@
 import React from 'react';
 import axios from 'axios'
 
-const apiKey = '6fd58c2421e8e2469be5ea3e8d4c9e6d';
+const apiKey = '30c105daaed4f60bf6a575ed72e9bb81';
 
 
 const Recipes = (props) => {
@@ -17,7 +17,6 @@ const Recipes = (props) => {
     //Modal to appear once clicked
     props.getModal(true)
     // Create a  recipe ingredients component to render out the ingredients.
-
   }
 
   return (
@@ -29,7 +28,6 @@ const Recipes = (props) => {
 
             return (
               < div id="container" key={index} tabIndex="0" className="recipeContainer" >
-                <button className="backTop">Back to top</button>
                 <div className="recipeImageTitle">
                   <img className="recipeImage" src={recipe.image_url} alt={recipe.title} />
                   <h2 className="recipeTitle">{recipe.title}</h2>

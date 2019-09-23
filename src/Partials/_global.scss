@@ -1,3 +1,8 @@
+//COLOR
+$primaryColor: #194769;
+$secondaryColor: #f2855e;
+$tertiaryColor: #f6f6e9;
+
 html {
   font-size: 125%;
   overflow-x: hidden;
@@ -6,7 +11,6 @@ html {
 body {
   background: #F0F8FF;
   font-family: sans-serif;
-  height: 100vh;
   margin: 0;
   background-image: url('../images/brooke-lark-jUPOXXRNdcA-unsplash.jpg');
   background-position: 50% 50%;
@@ -42,6 +46,12 @@ button {
   font-size: 15px;
   text-transform: uppercase;
   font-weight: 500;
+  background: $secondaryColor;
+  border: 1px solid $secondaryColor;
+  padding: 0.8rem;
+  white-space: nowrap;
+  font-family: 'Raleway', sans-serif;
+  font-weight: 700;
 }
 
 button:focus {
@@ -49,7 +59,7 @@ button:focus {
 }
 
 :focus {
-  box-shadow: 0 0 0 0.5px #ffffff, 0 0 3px 3px #3a97f9;
+  box-shadow: 0 0 0 0.5px #ffffff, 0 0 3px 4px $primaryColor;
 }     
 
 /* FOOTER SECTION */
@@ -57,7 +67,7 @@ button:focus {
 .recipeFooter {
    position: absolute;
    width:100%;
-   background: #000;
+   background: $primaryColor;
    margin-top: -2.9%;
    z-index: 100;
 }

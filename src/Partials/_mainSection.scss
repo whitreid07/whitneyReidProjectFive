@@ -35,17 +35,12 @@
   transition: all 0.3s;
 }
 
-.modalContainer {
-  display: flex;
-  flex-direction: column;
-}
-
 .modal {
-  position: absolute;
-  top: 0px;
-  left: 0px;
-  right: 0px;
-  bottom: 0px;
+  position: fixed;
+  top: 5%;
+  left: 10%;
+  right: 10%;
+  bottom: 5%;
   background-color: $tertiaryColor;
   display: flex;
   padding: 10%;
@@ -72,8 +67,4 @@
   padding: 0;
   padding-bottom: 2%;
   line-height: 50px;
-}
-
-.modalIngredients::marker {
-  font-weight: 700;
 }

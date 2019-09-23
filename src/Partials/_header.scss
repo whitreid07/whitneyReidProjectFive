@@ -3,7 +3,7 @@
 }
 
 .overlay {
-  width: 1080px;
+  width: 1150px;
   background-color: rgba(0, 0, 0, 0.3);  
   height: 100vh;
   display: flex;
@@ -34,7 +34,7 @@
 .foodieLogo {
   background: #000;
   border-radius: 50px;
-  padding: 3% ;
+  padding: 3% 4%;
   display: inline;
   color: #fff; 
   font-size: 1.9rem;
@@ -50,21 +50,24 @@
 }
 
 .headerTitle {
-  font-size: 3rem;
+  font-size: 3.5rem;
   color: #fff;
   margin: 0;
-  padding: 3% 0;
-  padding-top: 10%;
+  padding: 7% 0;
+  padding-bottom: 3%;
   text-transform: capitalize;
   text-shadow: 1px 1px 5px #808080;
+  font-family: 'Kaushan Script', cursive;
 }
 
 .typeWord {
   font-size: 1.8rem;
   color: #fff;
-  padding-bottom: 5%;
+  padding-bottom: 7%;
   font-weight: 900;
   text-shadow: 1px 1px 5px #808080;
+  font-family: 'Raleway', sans-serif;
+  letter-spacing: 0.1rem;
 }
 
 .formContainer {
@@ -79,23 +82,23 @@
   letter-spacing: 1.5px;
   padding: 2%;
   font-size: 15px;
-  width: 40%;
+  width: 56%;
   
 }
 
 
-.formButton {
-  border: solid 2px $secondaryColor;
-  background: $secondaryColor;
-  color:#fff;
-  padding: 2% 3%;
-  margin: 0 5px;
-  border-radius: 1px;
-  font-size: 15px;
-  text-transform: capitalize;
-  font-weight: 700;
-  margin-left: 15px;
-}
+// .formButton {
+//   border: solid 2px $secondaryColor;
+//   background: $secondaryColor;
+//   color:#fff;
+//   padding: 2% 3%;
+//   margin: 0 5px;
+//   border-radius: 1px;
+//   font-size: 15px;
+//   text-transform: capitalize;
+//   font-weight: 700;
+//   margin-left: 15px;
+// }
 
 .formButton i {
   margin: 0 0%;

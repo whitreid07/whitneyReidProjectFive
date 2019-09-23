@@ -6,27 +6,32 @@
 
   .modal {
     display: flex;
-    padding: 10%;
+    padding: 8% 10% 0 10%;
     display: flex;
     flex-direction: column;
   }
 
   .modalImageSize {
-    height: 250px;
+    height: 170px;
     object-fit: cover;
     margin-right: 10%;
     width: 100%;
   }
   .modalTitle {
+    font-size: 1.5rem;
     padding-top: 5%;
   }
 
   .modalIngredients {
     overflow: scroll;
      -webkit-overflow-scrolling: touch; 
-     height: 350px;
+     height: 195px;
+     font-size: 1rem;
+  }
 
-}
+  .modalIngredients li {
+    font-size: 0.9rem;
+  }
 }
 
 @media only screen and (max-width: 933px){
@@ -74,6 +79,9 @@
   .formButton {
     padding: 3% 3%;
   }
+  .modal {
+    padding: 10% 10% 0 10%;
+  }
 }
 
 @media only screen and (max-width: 747px){
@@ -108,12 +116,11 @@
     display: flex;
     flex-direction: column;
     justify-content: center;
-    border: 2px solid yellow;
     margin-top: 10%;
   }
 
   .recipeContainer {
-    width: 80%;
+    width: 100%;
     justify-content: center;
     margin: 0 auto;
     margin-bottom: 75px;
@@ -125,11 +132,16 @@
   }
 
   .modal {
-    position: absolute;
-    top: 40px;
-    left: 40px;
-    right: 40px;
-    bottom: 0px;
+    padding: 13% 10% 0 10%;
+  }
+
+  .modalImageSize {
+    height: 200px;
+  }
+
+  .modalTitle {
+    font-size: 1.3rem;
+    line-height: 1.7rem;
   }
 
   .backTop {
@@ -270,6 +282,16 @@
 
   .formContainer {
     padding: 0 10%;
+  }
+
+   .modalTitle {
+    font-size: 1rem;
+    line-height: 1.3rem;
+    padding: 15% 0;
+  }
+
+  .modalIngredients {
+    margin-bottom: 15%;
   }
 }
 

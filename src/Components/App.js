@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import axios from 'axios';
+import { animateScroll as scroll } from 'react-scroll';
 import swal from 'sweetalert';
 import '../Partials/App.scss';
 import Form from './Form';
@@ -7,7 +8,7 @@ import Recipes from './Recipes';
 import GetIngredients from './GetIngredients';
 
 // Declare API Key and URL
-const apiKey = '6fd58c2421e8e2469be5ea3e8d4c9e6d';
+const apiKey = '30c105daaed4f60bf6a575ed72e9bb81';
 const apiUrl = 'https://www.food2fork.com/api/search';
 
 //Set recipes, currentIngredients, has recipes and isModalShown data as initial state to an empty array
@@ -59,6 +60,7 @@ class App extends Component {
             recipes: sixRecipes,
             hasRecipes: false,
           })
+          scroll.scrollTo(600);
         }
       }).catch(err => (err))
   }
@@ -77,11 +79,11 @@ class App extends Component {
         <header className="headerContainer">
           <div className="overlay">
             <div className="headerContents">
-              <div className="foodieLogo">foodie</div>
-              <h1 className="headerTitle">what's cooking tonight? <span role="img" aria-label="folk, plate and knife">🍽</span></h1>
+              <div className="foodieLogo">foodie <span role="img" aria-label="folk, plate and knife">🍽</span></div>
+              <h1 className="headerTitle">what's cooking tonight? </h1>
               <p className="typeWord">Type a word to get a recipe below!</p>
 
-              <Form getRecipes={(e) => this.getRecipes(e)} keyDown={(e) => this.getRecipes(e)} />
+              <Form getRecipes={(e) => this.getRecipes(e)} />
 
             </div>
           </div>
