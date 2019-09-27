@@ -8,7 +8,7 @@ import Recipes from './Recipes';
 import GetIngredients from './GetIngredients';
 
 // Declare API Key and URL
-const apiKey = '30c105daaed4f60bf6a575ed72e9bb81';
+const apiKey = '6fd58c2421e8e2469be5ea3e8d4c9e6d';
 const apiUrl = 'https://www.food2fork.com/api/search';
 
 //Set recipes, currentIngredients, has recipes and isModalShown data as initial state to an empty array
