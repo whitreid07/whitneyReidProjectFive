@@ -12,9 +12,9 @@
 .modalIngredients{
   display: inline-flex;
   flex-direction: column;
-  list-style: none;
-  overflow: scroll;
+  overflow-y: scroll;
   border: 2px solid #d7eef2;
+  position: relative;
 }
 
 
@@ -27,11 +27,12 @@
   width: 50%;
   margin: 0;
   margin-top: 5%;
+  border: 1px solid $secondaryColor;
 }
 
 .ingredientsButton:hover {
-  background: #ff5e00f3;
-  border: 2px solid #ff5e00f3;
+  background: $primaryColor;
+  border: 1px solid $primaryColor;
   transition: all 0.3s;
 }
 
@@ -44,6 +45,26 @@
   background-color: $tertiaryColor;
   display: flex;
   padding: 10%;
+}
+
+.scrollbar {
+    background-color: purple;
+    float: left;
+    height: 300px;
+    margin-bottom: 25px;
+    margin-left: 22px;
+    margin-top: 40px;
+    width: 65px;
+    overflow-y: scroll;
+}
+
+.style-1::-webkit-scrollbar {
+    width: 6px;
+    background-color: purple;
+} 
+
+.force-overflow {
+    min-height: 450px;
 }
 
 .modalImageSize {
@@ -60,7 +81,10 @@
 .modalIngredients li {
   padding: 2% 3%;
   text-align: left;
+  margin-left: 5%;
+  line-height: 1.2rem;
 }
+
 
 .modalTitle {
   color: $primaryColor;

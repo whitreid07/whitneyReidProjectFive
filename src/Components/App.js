@@ -88,7 +88,7 @@ class App extends Component {
             </div>
           </div>
         </header>
-        <div className="modalContainer">
+        <div className="modalContainer scrollBar styleOne">
           <Recipes id="recipe" myRecipes={this.state.recipes} setCurrentIngredients={this.setCurrentIngredients} getModal={this.getModal} />
 
           {this.state.isModalShown ? <GetIngredients ingredientsObject={this.state.currentIngredients} closeModal={this.closeModal} /> : null}

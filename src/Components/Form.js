@@ -16,7 +16,7 @@ class Form extends Component {
     return (
       <form onSubmit={this.handleSubmit}>
         <div className="formContainer">
-          <input className="formInput" type="text" name="recipeName" placeholder="enter word ie. chicken" />
+          <input className="formInput" type="text" name="recipeName" placeholder="enter word ie. shrimp" />
           <button>
             <Link
               activeClass="active"
