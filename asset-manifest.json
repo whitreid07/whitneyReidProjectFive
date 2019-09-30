@@ -1,6 +1,6 @@
 {
   "files": {
-    "main.css": "/whitneyReidProjectFive/static/css/main.3b5b706c.chunk.css",
+    "main.css": "/whitneyReidProjectFive/static/css/main.550307c4.chunk.css",
     "main.js": "/whitneyReidProjectFive/static/js/main.baa8f99f.chunk.js",
     "main.js.map": "/whitneyReidProjectFive/static/js/main.baa8f99f.chunk.js.map",
     "runtime~main.js": "/whitneyReidProjectFive/static/js/runtime~main.08ad1b55.js",
@@ -8,9 +8,9 @@
     "static/js/2.a00ee499.chunk.js": "/whitneyReidProjectFive/static/js/2.a00ee499.chunk.js",
     "static/js/2.a00ee499.chunk.js.map": "/whitneyReidProjectFive/static/js/2.a00ee499.chunk.js.map",
     "index.html": "/whitneyReidProjectFive/index.html",
-    "precache-manifest.d578d6f85753bb0ae525726d96879588.js": "/whitneyReidProjectFive/precache-manifest.d578d6f85753bb0ae525726d96879588.js",
+    "precache-manifest.4aa08f5072b3158ed83e1adebb45802c.js": "/whitneyReidProjectFive/precache-manifest.4aa08f5072b3158ed83e1adebb45802c.js",
     "service-worker.js": "/whitneyReidProjectFive/service-worker.js",
-    "static/css/main.3b5b706c.chunk.css.map": "/whitneyReidProjectFive/static/css/main.3b5b706c.chunk.css.map",
+    "static/css/main.550307c4.chunk.css.map": "/whitneyReidProjectFive/static/css/main.550307c4.chunk.css.map",
     "static/media/App.scss": "/whitneyReidProjectFive/static/media/brooke-lark-jUPOXXRNdcA-unsplash.8437a03b.jpg"
   }
 }
