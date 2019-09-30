@@ -77,6 +77,10 @@
 .closeButton {
   background: $primaryColor;
   border: solid 2px $primaryColor;
+  width: 50px;
+  position: absolute;
+  top: 0;
+  right: 0;
 
 }
 .closeButton:hover {

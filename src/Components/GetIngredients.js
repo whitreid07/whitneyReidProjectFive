@@ -5,6 +5,7 @@ const GetIngredients = (props, index) => {
   return (
     <div key={index} className="modal">
       <div className="modalImageContainer">
+        <button onClick={() => props.closeModal(false)} className="closeButton"><i aria-hidden="true" title="Close icon" className="fas fa-window-close"></i></button>
         <div className="modalImageSize">
           <img className="modalImage" src={props.ingredientsObject.image_url} alt={props.ingredientsObject.title} />
         </div>
@@ -25,8 +26,6 @@ const GetIngredients = (props, index) => {
         <button className="recipeButton">
           <a target="_blank" rel="noopener noreferrer" href={props.ingredientsObject.source_url}><i aria-hidden="true" title="External link" className="fas fa-external-link-alt"></i>  Get Recipe! </a>
         </button>
-
-        <button onClick={() => props.closeModal(false)} className="closeButton"><i aria-hidden="true" title="Close icon" className="fas fa-window-close"></i>  Close </button>
       </div>
     </div>
   )
