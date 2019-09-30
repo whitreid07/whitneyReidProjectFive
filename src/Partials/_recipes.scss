@@ -75,7 +75,6 @@
 }
 
 .closeButton {
-  background: $primaryColor;
   border: solid 2px $primaryColor;
   width: 50px;
   position: absolute;
@@ -83,12 +82,6 @@
   right: 0;
 
 }
-.closeButton:hover {
-  background: #126fb3;
-  border: solid 2px #126fb3;
-}
-
-
 input:-webkit-autofill {
   -webkit-box-shadow: 0 0 0 30px #f3f3f3 inset;
   -webkit-text-fill-color: #2c3e50 !important;
