@@ -41,7 +41,6 @@
   }
 }
 
-
 @media only screen and (max-width: 839px){
 
   .overlay {
@@ -82,6 +81,10 @@
   }
   .modal {
     padding: 10% 10% 0 10%;
+  }
+
+  .modalIngredients {
+    height: 207px;
   }
 }
 
@@ -132,10 +135,6 @@
    bottom: 0;
   }
 
-  .modal {
-    padding: 0;
-  }
-
   .modalImageSize {
     height: 200px;
   }
@@ -152,7 +151,6 @@
 
 @media only screen and (max-width: 517px){
   
-
   .headerContents h1 {
     font-size: 2.9rem;
     padding-top: 10%;
@@ -213,8 +211,7 @@
     padding: 0;
     padding-top: 10%;
   }
-
-
+  
   .typeWord {
     font-size: 1rem;
     padding-top: 5%;
@@ -266,10 +263,6 @@
 }
 
 @media only screen and (max-width: 355px){
-   .headerContents h1  {
-    font-size: 2rem;
-  }
-
   .typeWord {
     font-size: 1rem;
     padding: 5% 10%;
