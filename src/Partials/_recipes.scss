@@ -44,8 +44,7 @@
 }
 
 .recipeButton,
-.ingredientsButton, 
-.closeButton {
+.ingredientsButton {
   border: solid 2px #f2855e;
   background: #f2855e;
   color:#fff;
@@ -70,18 +69,21 @@
 .ingredientsButton {
   width: 200px;
   font-weight: 700;
-  border: solid 2px $secondaryColor;
-  background: $secondaryColor;
 }
 
 .closeButton {
-  border: solid 2px $primaryColor;
   width: 50px;
   position: absolute;
   top: 0;
   right: 0;
-
+  background: none;
+  border: none;
+  i {
+    font-size: 1.3rem;
+    color: $primaryColor;
+  }
 }
+
 input:-webkit-autofill {
   -webkit-box-shadow: 0 0 0 30px #f3f3f3 inset;
   -webkit-text-fill-color: #2c3e50 !important;
